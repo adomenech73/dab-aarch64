@@ -1,0 +1,3 @@
+[submodule "dockerfiles"]
+	path = dockerfiles
+	url = https://github.com/adomenech73/dockerhub-aarch64
