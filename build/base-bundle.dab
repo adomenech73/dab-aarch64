@@ -1,0 +1,56 @@
+{
+  "Services": {
+    "mongodb": {
+      "Image": "adomenech73/mongodb-aarch64@sha256:6eebec454540b93654e2306965ea0d6d848626e874453b4f7a7e8c4c243c745e", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 27017, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "nginx": {
+      "Env": [
+        "constraint:node==pine64-1"
+      ], 
+      "Image": "adomenech73/nginx-aarch64@sha256:0edeed772e9e7fa8237546b192b0896bd61dafc7e01d50e90449f6ac4cf0dcc2", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "nodejs": {
+      "Image": "adomenech73/nodejs-aarch64@sha256:62f726d65c0f893144d7841c148bb902a16ce0220cac9ba3d69ee2f72d453e0b", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 3000, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "redis": {
+      "Image": "adomenech73/redis-aarch64@sha256:0b1ef28d89108f1f971792d7b54734c7ca2b61c5bbc2def54a5f9cba42f3add2", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 6379, 
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  }, 
+  "Version": "0.1"
+}

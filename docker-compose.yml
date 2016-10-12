@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  nginx:
+    build: ./dockerfiles/nginx
+    image: adomenech73/nginx-aarch64
+    ports:
+        - "80:80"
+#    networks:
+#        - bridge
+#        - ingress
+    environment:
+        - "constraint:node==pine64-1"
+  nodejs:
+    build: ./dockerfiles/nodejs
+    image: adomenech73/nodejs-aarch64
+#    networks:
+#        - ingress
+    ports:
+        - "3000"
+  redis:
+    build: ./dockerfiles/redis
+    image: adomenech73/redis-aarch64
+#    networks:
+#        - ingress
+    ports:
+        - "6379"
+  mongodb:
+    build: ./dockerfiles/mongodb
+    image: adomenech73/mongodb-aarch64
+#    networks:
+#        - ingress
+    ports:
+        - "27017"
